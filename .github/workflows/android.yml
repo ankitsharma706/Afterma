@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -21,6 +24,10 @@ jobs:
 
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
+
+      - name: Create .env file for Secrets Plugin
+        run: |
+          echo "GEMINI_API_KEY=dummy_key_for_build" > .env
 
       - name: Grant Permission
         run: chmod +x ./gradlew
