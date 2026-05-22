@@ -1,0 +1,84 @@
+# =============================================================
+# AFTERMA - .gitignore
+# Android + Kotlin + Gradle + AI Studio project
+# =============================================================
+
+# -------------------------------------------------------
+# Secrets & Environment — NEVER COMMIT THESE
+# -------------------------------------------------------
+.env
+*.env
+local.properties
+debug.keystore
+release.keystore
+*.jks
+*.keystore
+google-services.json
+google-services-staging.json
+
+# -------------------------------------------------------
+# Android Build Outputs
+# -------------------------------------------------------
+/build
+app/build
+/captures
+*.apk
+*.aab
+*.ap_
+output.json
+
+# -------------------------------------------------------
+# Gradle
+# -------------------------------------------------------
+.gradle
+gradle-app.setting
+!gradle-wrapper.jar
+!gradle-wrapper.properties
+.gradletasknamecache
+build-cache/
+
+# -------------------------------------------------------
+# IntelliJ / Android Studio IDE Files
+# -------------------------------------------------------
+*.iml
+.idea/
+.idea/caches
+.idea/libraries
+.idea/modules.xml
+.idea/workspace.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+*.iws
+out/
+
+# -------------------------------------------------------
+# Kotlin
+# -------------------------------------------------------
+.kotlin/
+
+# -------------------------------------------------------
+# Native Build
+# -------------------------------------------------------
+.externalNativeBuild
+.cxx
+obj/
+
+# -------------------------------------------------------
+# macOS
+# -------------------------------------------------------
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+
+# -------------------------------------------------------
+# Roborazzi Screenshot Tests (generated snapshots)
+# -------------------------------------------------------
+app/src/test/snapshots/
+
+# -------------------------------------------------------
+# Build outputs directory used by AI Studio
+# (keep the folder, ignore its contents)
+# -------------------------------------------------------
+.build-outputs/*
+!.build-outputs/.gitkeep
